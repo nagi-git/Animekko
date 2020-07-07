@@ -8,37 +8,38 @@
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
   crossorigin="anonymous">
+  
+<!-- CSSの読込 -->
+<link th:href="@{/css/home.css}" rel="stylesheet"></link>
+
 <title>Anime Search</title>
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <a class="navbar-brand" href="#">サンプル株式会社</a>
-
-      <!-- 横幅が狭い時に出るハンバーガーボタン -->
-      <button type="button" class="navbar-toggler"
-        data-toggle="collapse" data-target="#nav-bar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- メニュー項目 -->
-      <div class="collapse navbar-collapse" id="nav-bar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <form method="post" action="/title/confirm">
-              <input type="text" name="title" value="" size="40"></input> <input type="submit" value="検索" />
-            </form>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <nav class="navbar navbar-expand-sm navbar-inverse">
+        <div class="heading-primary">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Animekko</a>
+          </div>
+        </div>
+  
+        <!-- メニュー項目 -->
+        <div class="collapse navbar-collapse" id="nav-bar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <form class="navbar-form navbar-right" method="post" action="/title/confirm">
+                <input type="text" name="title" value="" size="40"></input><input
+                  type="submit" value="検索" />
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
-  <h1>Hello World</h1>
-  作品名で検索
-  <form method="post" action="/title/confirm">
-    <input type="text" name="title" value="" size="30"></input> <input
-      type="submit" value="検索" />
-  </form>
+  <div class="container">
+
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
