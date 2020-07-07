@@ -1,0 +1,32 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>ResponseSample</title>
+</head>
+<body>
+  <h1>HelloResponseDB</h1>
+  <table class="sample-table" th:each="item : ${titleList}" th:object="${item}">
+    <tr>
+      <td>都道府県名：</td>
+      <td>都道府県名</td>
+    </tr>
+    <tr>
+      <td>都道府県名：</td>
+      <td th:text="*{title}"></td>
+    </tr>
+    <tr>
+      <td>都道府県名：</td>
+      <td th:text="*{media}"></td>
+    </tr>
+    <tr>
+      <td>都道府県名：</td>
+      <td th:text="*{official_site_url}"></td>
+    </tr>
+    <tr>
+      <td>都道府県名：</td>
+      <td th:text="*{wikipedia_url}"></td>
+    </tr>
+  </table>
+</body>
+</html>
