@@ -21,10 +21,10 @@ public class AnimeSearchController {
 	/**
 	 * GET用の処理.
 	 */
-	@RequestMapping("/title")
-	public String titleForm(HttpSession session, Model model) {
+	@RequestMapping("/home")
+	public String homeForm(HttpSession session, Model model) {
 		// title.htmlに画面遷移
-		return "title";
+		return "home";
 	}
 
 	/**
@@ -32,16 +32,16 @@ public class AnimeSearchController {
 	 * 
 	 * @return "title-confirm"
 	 */
-	@RequestMapping(value = "/title/confirm", method = RequestMethod.POST)
-	public String titleConfirm(HttpSession session, Model model, @RequestParam("title") String title) {
+	@RequestMapping(value = "/home/confirm", method = RequestMethod.POST)
+	public String homeConfirm(HttpSession session, Model model, @RequestParam("title") String title) {
 
-		System.out.println("titleConfirm呼び出し成功");
+		System.out.println("homeConfirm呼び出し成功");
 
 		// 一応必須チェックのみ 数字・桁数チェックは省略
 		// nullまたは空文字の場合、入力フォームにエラーメッセージを表示
 		if (title == null || title.equals("")) {
 			model.addAttribute("errorMessage", "都道府県名を入力してください。");
-			return titleForm(session, model);
+			return homeForm(session, model);
 		}
 
 		// 図書館検索APIサービス呼び出し
@@ -54,6 +54,6 @@ public class AnimeSearchController {
 
 		System.out.println("model.addAttribute呼び出し成功");
 
-		return "title-confirm";
+		return "home-confirm";
 	}
 }
