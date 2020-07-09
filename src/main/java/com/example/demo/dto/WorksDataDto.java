@@ -3,7 +3,7 @@ package com.example.demo.dto;
 import lombok.Data;
 
 @Data
-public class TitleDataDto {
+public class WorksDataDto {
 
 	/** ID */
 	int id;
@@ -50,9 +50,6 @@ public class TitleDataDto {
 	/** MyAnimeListの作品ID */
 	String mal_anime_id;
 
-//	/** タイトル */
-//	String facebook_image_url;
-
 	/** エピソード数 */
 	int episodes_count;
 
@@ -64,5 +61,8 @@ public class TitleDataDto {
 
 	/** エピソードが存在しない作品かどうか */
 	boolean no_episodes;
+
+	/** 作品情報リスト */
+	private String images;
 
 }

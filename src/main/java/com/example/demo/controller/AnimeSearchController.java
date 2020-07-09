@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.dto.TitleDto;
+import com.example.demo.dto.WorksDto;
 import com.example.demo.service.TitleService;
 
 @Controller
@@ -45,12 +45,12 @@ public class AnimeSearchController {
 		}
 
 		// 図書館検索APIサービス呼び出し
-		TitleDto titleDto = titleService.service(title);
+		WorksDto worksDto = titleService.service(title);
 
 		System.out.println("titleService.service呼び出し成功");
 
 		// thymeleafでリストを展開して表示する
-		model.addAttribute("titleList", titleDto.getWorks());
+		model.addAttribute("titleList", worksDto.getWorks());
 
 		System.out.println("model.addAttribute呼び出し成功");
 

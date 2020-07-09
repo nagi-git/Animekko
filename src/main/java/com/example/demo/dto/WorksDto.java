@@ -5,14 +5,15 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class TitleDto {
+public class WorksDto {
+
 	private int total_count;
 
 	private int next_page;
 
 	private int prev_page;
 
-	/** リスト */
-	private List<TitleDataDto> works;
+	/** 作品情報リスト */
+	private List<WorksDataDto> works;
 
 }
