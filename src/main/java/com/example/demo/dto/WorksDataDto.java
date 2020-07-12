@@ -65,4 +65,6 @@ public class WorksDataDto {
 	/** 作品情報リスト */
 	private String images;
 
+	String recommended_url;
+
 }

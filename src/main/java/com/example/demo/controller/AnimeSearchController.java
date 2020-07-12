@@ -30,7 +30,7 @@ public class AnimeSearchController {
 	/**
 	 * 図書館一覧表示
 	 * 
-	 * @return "title-confirm"
+	 * @return "home-confirm"
 	 */
 	@RequestMapping(value = "/home/confirm", method = RequestMethod.POST)
 	public String homeConfirm(HttpSession session, Model model, @RequestParam("title") String title) {
@@ -44,7 +44,7 @@ public class AnimeSearchController {
 			return homeForm(session, model);
 		}
 
-		// 図書館検索APIサービス呼び出し
+		// アニメ検索APIサービス呼び出し
 		WorksDto worksDto = titleService.service(title);
 
 		System.out.println("titleService.service呼び出し成功");
