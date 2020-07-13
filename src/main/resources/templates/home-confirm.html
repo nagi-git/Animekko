@@ -1,30 +1,37 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8"></meta>
-<title>ResponseSample</title>
+<meta charset="UTF-8">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous">
+
+<!-- CSSの読込 -->
+<link th:href="@{/css/home.css}" rel="stylesheet"></link>
+
+<title>home-confirm</title>
 </head>
 <body>
   <h1>HelloResponseDB</h1>
-  <table class="sample-table" th:each="item : ${titleList}" th:object="${item}">
+  <table class="table table-bordered" th:each="item : ${worksList}" th:object="${item}">
+
     <tr>
-      <td>都道府県名：</td>
-      <td>都道府県名</td>
-    </tr>
-    <tr>
-      <td>都道府県名：</td>
+      <td>作品名</td>
       <td th:text="*{title}"></td>
     </tr>
     <tr>
-      <td>都道府県名：</td>
+      <td>リリース媒体</td>
       <td th:text="*{media}"></td>
     </tr>
     <tr>
-      <td>都道府県名：</td>
+      <td>オフィシャルサイト</td>
       <td th:text="*{official_site_url}"></td>
     </tr>
     <tr>
-      <td>都道府県名：</td>
+      <td>見てる/見たい/見た人の数</td>
       <td th:text="*{wikipedia_url}"></td>
     </tr>
   </table>

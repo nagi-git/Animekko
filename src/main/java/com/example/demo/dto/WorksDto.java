@@ -5,7 +5,7 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class TitleDto {
+public class WorksDto {
 	private int total_count;
 
 	private int next_page;
@@ -13,6 +13,6 @@ public class TitleDto {
 	private int prev_page;
 
 	/** リスト */
-	private List<TitleDataDto> works;
+	private List<WorksDataDto> works;
 
 }

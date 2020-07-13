@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.demo.dto.TitleDto;
+import com.example.demo.dto.WorksDto;
 
 @Service
 public class TitleService {
@@ -14,11 +14,11 @@ public class TitleService {
 	@Qualifier("titleSearchRestTemplate")
 	RestTemplate restTemplate;
 
-	/** 図書館検索API リクエストURL */
+	/** アニメ検索API リクエストURL */
 	private static final String URL = "https://api.annict.com/v1/works?filter_title={title}&access_token=6TCOx_Yr4oe0vnENIq01CruyxtHMzh-is19txE8t5kM";
 
-	public TitleDto service(String title) {
+	public WorksDto service(String title) {
 		System.out.println("service呼び出し成功");
-		return restTemplate.getForObject(URL, TitleDto.class, title);
+		return restTemplate.getForObject(URL, WorksDto.class, title);
 	}
 }
