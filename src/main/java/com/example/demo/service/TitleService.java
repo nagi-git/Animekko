@@ -55,15 +55,16 @@ public class TitleService {
 	}
 
 	public static JsonNode getJsonNode(String jsonString) {
-		JsonNode head = null;
+		JsonNode node = null;
 		try {
 			JsonFactory jfactory = new JsonFactory();
 			JsonParser parser = jfactory.createJsonParser(jsonString);
 			ObjectMapper mapper = new ObjectMapper();
-			head = mapper.readTree(parser);
+			node = mapper.readTree(parser);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return head;
+		return node;
 	}
+
 }
