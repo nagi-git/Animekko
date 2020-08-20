@@ -1,52 +1,26 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8"></meta>
+  
+  <!-- Bootstrapの設定 -->
+  <link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+    rel="stylesheet"></link>
+  <script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+  <script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+  
+  <!-- CSSの読込 -->
+  <link th:href="@{/css/home.css}" rel="stylesheet"></link>
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossorigin="anonymous">
-
-<!-- CSSの読込 -->
-<link th:href="@{/css/home.css}" rel="stylesheet"></link>
-
-<title>Anime Search</title>
+  
+  <title>Home</title>
 </head>
 <body>
-
-  <!-- ===== ヘッダー（ナビゲーションバー） =====  -->
-  <div class="navbar-header">
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">
-        <h2 class="heading-primary">Animekko</h2>
-      </a>
-      <form class="form-inline" method="post" action="/home/confirm">
-        <div class="row">
-          <div class="input-group col-12">
-            <input type="text" class="form-control" name="title" value="" size="40" placeholder="作品名で検索" aria-label="作品名で検索" aria-describedby="button-addon2"></input>
-            <input type="submit" value="検索"/>
-          </div>
-        </div>
-      </form>
-    </nav>
+  <div th:fragment="home_contents">
+    <div class="page-header">
+      <h1>ホーム</h1>
+    </div>
   </div>
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
 </body>
 </html>

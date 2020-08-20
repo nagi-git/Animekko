@@ -15,29 +15,37 @@
 <title>home-confirm</title>
 </head>
 <body>
-  <h1>HelloResponseDB</h1>
-  <table class="table table-bordered" th:each="item : ${worksList}" th:object="${item}">
-
-    <tr>
-      <td>作品名</td>
-      <td th:text="*{title}"></td>
-    </tr>
-    <tr>
-      <td>リリース媒体</td>
-      <td th:text="*{media}"></td>
-    </tr>
-    <tr>
-      <td>オフィシャルサイト</td>
-      <td><a th:href="*{official_site_url}" th:text="*{official_site_url}" target="_blank"></a></td>
-    </tr>
-    <tr>
-      <td>画像</td>
-      <td><img th:src="*{images.recommended_url}" alt="サンプル" width="120" height="90"></td>
-    </tr>
-    <tr>
-      <td>見てる/見たい/見た人の数</td>
-      <td th:text="*{watchers_count}"></td>
-    </tr>
-  </table>
+  <div th:fragment="userDetail_contents">
+    <div class="row">
+      <div class="col-sm-5">
+        <h1>検索結果</h1>
+        <table class="table table-bordered"
+          th:each="item : ${worksList}" th:object="${item}">
+          <tr>
+            <td>作品名</td>
+            <td th:text="*{title}"></td>
+          </tr>
+          <tr>
+            <td>リリース媒体</td>
+            <td th:text="*{media}"></td>
+          </tr>
+          <tr>
+            <td>オフィシャルサイト</td>
+            <td><a th:href="*{official_site_url}"
+              th:text="*{official_site_url}" target="_blank"></a></td>
+          </tr>
+          <tr>
+            <td>画像</td>
+            <td><img th:src="*{images.recommended_url}" alt="サンプル"
+              width="120" height="90"></td>
+          </tr>
+          <tr>
+            <td>見てる/見たい/見た人の数</td>
+            <td th:text="*{watchers_count}"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
