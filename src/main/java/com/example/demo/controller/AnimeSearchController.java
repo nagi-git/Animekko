@@ -40,7 +40,7 @@ public class AnimeSearchController {
 		// 一応必須チェックのみ 数字・桁数チェックは省略
 		// nullまたは空文字の場合、入力フォームにエラーメッセージを表示
 		if (title == null || title.equals("")) {
-			model.addAttribute("errorMessage", "都道府県名を入力してください。");
+			model.addAttribute("errorMessage", "作品名を入力してください。");
 			return homeForm(session, model);
 		}
 

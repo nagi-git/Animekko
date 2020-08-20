@@ -28,7 +28,11 @@
     </tr>
     <tr>
       <td>オフィシャルサイト</td>
-      <td th:text="*{official_site_url}"></td>
+      <td><a th:href="*{official_site_url}" th:text="*{official_site_url}" target="_blank"></a></td>
+    </tr>
+    <tr>
+      <td>画像</td>
+      <td><img th:src="*{images.recommended_url}" alt="サンプル" width="120" height="90"></td>
     </tr>
     <tr>
       <td>見てる/見たい/見た人の数</td>
