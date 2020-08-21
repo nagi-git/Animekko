@@ -1,3 +1,30 @@
+body {
+  padding-top: 0px;
+}
+
+.sidebar {
+  position: fixed;
+  display: block;
+  top: 50px;
+  bottom: 0;
+  background-color: #F4F5F7;
+}
+
+.main {
+  padding-top: 80px;
+  padding-left: 0px;
+  position: fixed;
+  display: block;
+  top: 0px;
+  bottom: 0;
+}
+
+.page-header {
+  margin-top: 0px;
+}
+
 .heading-primary{
   font-family: 'Sacramento', cursive;
 }
+
+

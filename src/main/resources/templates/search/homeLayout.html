@@ -12,13 +12,13 @@
 <!-- CSSの読込 -->
 <link th:href="@{/css/home.css}" rel="stylesheet"></link>
 
-<title>Home</title>
+<title>HomeLayout</title>
 </head>
 <body>
 
   <!-- ===== ヘッダー（ナビゲーションバー） =====  -->
-  <div class="navbar-header">
-    <div class="container-fluid">
+  <div class="container-fluid">
+    <div class="navbar-header">
       <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="/">
           <h2 class="heading-primary">Animekko</h2>
@@ -34,7 +34,7 @@
           </div>
         </form>
       </nav>
-    </div>>
+    </div>
   </div>
 
   <!-- ===== コンテンツ =====  -->
@@ -44,8 +44,8 @@
         <div th:include="__${contents}__"></div>
       </div>
     </div>
-  </div>  
-  
+  </div>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -59,6 +59,7 @@
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+  <script defer
+    src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
 </body>
 </html>
