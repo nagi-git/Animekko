@@ -24,7 +24,7 @@ public class AnimeSearchController {
 	@RequestMapping("/home")
 	public String homeForm(HttpSession session, Model model) {
 		// コンテンツ部分にホーム画面を表示するための文字列を登録
-		model.addAttribute("contents", "search/home :: home_contents");
+//		model.addAttribute("contents", "search/home :: home_contents");
 
 		// title.htmlに画面遷移
 		return "search/homeLayout";
@@ -47,7 +47,7 @@ public class AnimeSearchController {
 			return homeForm(session, model);
 		}
 
-		// 図書館検索APIサービス呼び出し
+		// アニメ検索APIサービス呼び出し
 		WorksDto worksDto = titleService.service(title);
 
 		System.out.println("titleService.service呼び出し成功");
@@ -55,10 +55,10 @@ public class AnimeSearchController {
 		// thymeleafでリストを展開して表示する
 		model.addAttribute("worksList", worksDto.getWorks());
 		// コンテンツ部分に検索結果一覧を表示するための文字列を登録
-		model.addAttribute("contents", "search/home-confirm :: searchConfirm_contents");
+//		model.addAttribute("contents", "search/home-confirm :: searchConfirm_contents");
 
 		System.out.println("model.addAttribute呼び出し成功");
 
-		return "search/homeLayout";
+		return "search/home-confirm";
 	}
 }
