@@ -15,27 +15,26 @@
 <title>HomeLayout</title>
 </head>
 <body>
-
   <!-- ===== ヘッダー（ナビゲーションバー） =====  -->
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
         <a class="navbar-brand" href="/">
           <h2 class="heading-primary">Animekko</h2>
         </a>
-        <form class="form-inline" method="post" action="/home/confirm">
+        <form class="form-inline my-2 my-lg-0" method="post" action="/home/confirm">
           <div class="row">
-            <div class="input-group col-12">
-              <input type="text" class="form-control" name="title"
+            <div class="input-group">
+              <input type="text" class="form-control mr-sm-2" name="title"
                 value="" size="40" placeholder="作品名で検索"
                 aria-label="作品名で検索" aria-describedby="button-addon2"></input>
               <input type="submit" value="検索" />
             </div>
           </div>
         </form>
-      </nav>
+      </div>
     </div>
-  </div>
+  </nav>
 
   <!-- ===== コンテンツ =====  -->
   <div class="container-fluid">

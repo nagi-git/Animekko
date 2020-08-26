@@ -59,6 +59,6 @@ public class AnimeSearchController {
 
 		System.out.println("model.addAttribute呼び出し成功");
 
-		return "search/home-confirm";
+		return "search/homeConfirm";
 	}
 }
