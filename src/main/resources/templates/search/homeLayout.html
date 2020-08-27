@@ -16,34 +16,42 @@
 </head>
 <body>
   <!-- ===== ヘッダー（ナビゲーションバー） =====  -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">
-          <h2 class="heading-primary">Animekko</h2>
-        </a>
-        <form class="form-inline my-2 my-lg-0" method="post" action="/home/confirm">
-          <div class="row">
-            <div class="input-group">
-              <input type="text" class="form-control mr-sm-2" name="title"
-                value="" size="40" placeholder="作品名で検索"
-                aria-label="作品名で検索" aria-describedby="button-addon2"></input>
-              <input type="submit" value="検索" />
-            </div>
-          </div>
-        </form>
-      </div>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">
+      <h2 class="heading-primary">Animekko</h2>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end"
+      id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">ランキングを検索</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">問合せ</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" method="post"
+        action="/home/confirm">
+        <input class="form-control mr-sm-2" type="text" name="title"
+          value="" size="40" placeholder="作品名で検索" aria-label="作品名で検索">
+        <button class="btn btn-outline-success my-2 my-sm-0"
+          type="submit">検索</button>
+      </form>
     </div>
   </nav>
 
   <!-- ===== コンテンツ =====  -->
-  <div class="container-fluid">
     <div class="row">
-      <div>
-        <h2>ホーム</h2>
+      <div class="col-sm-12 main">
+        <div th:include="__${contents}__"></div>
       </div>
     </div>
-  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

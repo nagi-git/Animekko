@@ -1,7 +1,21 @@
-
-
 .heading-primary{
   font-family: 'Sacramento', cursive;
 }
 
+
+/*--------------------------------
+ Home
+---------------------------------*/
+body {
+  background-color: #fadebb;
+  color: #9c082d;
+}
+
+.page-header {
+  background-image: url('top_image.JPG');
+  height: 40vw;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+}
 
