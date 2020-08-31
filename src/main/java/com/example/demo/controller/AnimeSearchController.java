@@ -57,7 +57,7 @@ public class AnimeSearchController {
 		System.out.println("model.addAttribute呼び出し成功");
 
 		// コンテンツ部分に検索結果一覧を表示するための文字列を登録
-		model.addAttribute("contents", "search/homeConfirm :: searchConfirm_contents");
+		model.addAttribute("contents", "search/searchConfirm :: searchConfirm_contents");
 
 		return "search/homeLayout";
 	}

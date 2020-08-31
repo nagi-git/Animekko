@@ -13,9 +13,16 @@ body {
 
 .page-header {
   background-image: url('top_image.JPG');
-  height: 40vw;
-  background-size: cover;
-  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
+  height: 480px;
+  background-size: auto 100%;
 }
 

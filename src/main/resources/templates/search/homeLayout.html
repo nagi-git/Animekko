@@ -29,11 +29,9 @@
     <div class="collapse navbar-collapse justify-content-end"
       id="navbarSupportedContent">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">ランキングを検索</a>
+        <li class="nav-item active"><a class="nav-link" href="#">ランキングを検索</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">問合せ</a>
+        <li class="nav-item active"><a class="nav-link" href="#">問合せ</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" method="post"
@@ -47,11 +45,11 @@
   </nav>
 
   <!-- ===== コンテンツ =====  -->
-    <div class="row">
-      <div class="col-sm-12 main">
-        <div th:include="__${contents}__"></div>
-      </div>
+  <div class="row">
+    <div class="col-sm-12 main">
+      <div th:include="__${contents}__"></div>
     </div>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
