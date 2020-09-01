@@ -19,24 +19,19 @@
     <div class="row">
       <div class="col-sm-10">
         <h1>候補一覧</h1>
-        <table class="table table-bordered"
-          th:each="item : ${worksList}" th:object="${item}">
-          <tr>
-            <td><img th:src="*{images.recommended_url}" alt="サンプル"
-              width="120" height="90"></td>
-          </tr>
-          <tr>
-            <td th:text="*{title}"></td>
-          </tr>
-          <tr>
-            <td th:text="*{media_text}"></td>
-          </tr>
-          <tr>
-            <td>
-              <span th:text="'見てる/見たい/見た人の数：' + *{watchers_count} +'人'"></span>
-            </td>
-          </tr>
-        </table>
+        <div class="anime_title_box" th:each="item : ${worksList}" th:object="${item}">
+          <table class="table table-borderless">
+            <tr>
+              <td><img th:src="*{images.recommended_url}" alt="サンプル"
+                width="120" height="90"></td>
+              <td>
+                <h2 class = anime_title th:text="*{title}"></h2>
+                <span th:text="'リリース媒体：' + *{media_text}"></span></br>
+                <span th:text="'見てる/見たい/見た人の数：' + *{watchers_count} +'人'"></span>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </div>
